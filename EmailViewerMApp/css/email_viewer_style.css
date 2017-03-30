@@ -1,0 +1,187 @@
+/*
+	MAIN
+*/
+
+.row-grid {
+	margin:0px;
+	padding-top: 7px;
+	width:100%;
+}
+.col-grid-3 {
+	display:inline-block; 
+	margin:0px; 
+	width:32%;
+}
+
+.ui-li-file-item:active {
+	background-color: lightgrey;
+} 
+.ui-li-del-file-item {
+	
+}
+
+.icon-active {
+   	background-color: white;
+   	cursor: pointer;
+}
+
+.icon-active:active {
+   	background-color: #5dd;
+   	cursor: pointer;
+}
+
+.icon-disabled {
+	background-color: #a8a8a8;
+}
+.btn-text-disabled {
+	color: #a8a8a8 !important;
+}
+
+.icon-home {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/home.png');
+}
+.icon-add {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/add-button.png');
+}
+.icon-del {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../lib/tau/mobile/theme/default/images/page/00_icon_delete.png');
+	
+}
+.icon-del-black {
+  	display: inline-block;
+  	width: 24px;
+  	height: 24px;
+  	background-color: black;
+  	-webkit-mask-size: 24px 24px;
+  	-webkit-mask-image: url('../lib/tau/mobile/theme/default/images/page/00_icon_delete.png');
+	
+}
+
+.icon-back {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/go-back-left-arrow.png');
+}
+.icon-save {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../lib/tau/mobile/theme/default/images/controls/core_check_icon.png');
+}
+.icon-camera {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/camera.png');
+}
+.icon-sync {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/synchronization-arrows.png');
+}
+.icon-reply {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/reply.png');
+}
+.icon-send {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/mail-send.png');
+}
+.icon-add-contact {
+  	display: inline-block;
+  	width: 32px;
+  	height: 32px;
+  	background-color: white;
+  	-webkit-mask-size: 32px 32px;
+  	-webkit-mask-image: url('../images/add-contacts.png');
+  	-webkit-mask-repeat: no-repeat;
+}
+.ui-footer {
+  	height: 65px;
+}
+.ui-footer-btn-text {
+	color: white;
+	font-size: 14px; 
+}
+
+
+/*
+	EMAIL LIST
+*/
+
+.ui-email-item {
+	position: relative; 
+	background-color: white; 
+	padding: 5px;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+}
+.ui-email-unread-item {
+	
+	background-color: lightblue;
+	
+}
+
+.ui-email-item-topic {
+	padding: 0px; 
+	margin:0px; 
+	font-size: 20px;
+}
+
+.ui-email-item-from {
+	padding: 0px; 
+	margin:0px; 
+	font-size: 18px; 
+	font-style: intalic;
+}
+
+.ui-email-item-date {
+	padding: 0px; 
+	margin:0px; 
+	font-size: 16px; 
+	text-align:right;
+}
+
+.ui-email-item-checkbox {
+	position: absolute !important; 
+	top: 5px; 
+	right: 5px;
+}
+.ui-textarea-email-veiwer {
+	
+	font-size: 16px !important;
+	
+}

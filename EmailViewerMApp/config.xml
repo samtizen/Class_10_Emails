@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/EmailViewerMApp" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="DxoVyiJ2cA.EmailViewerMApp" package="DxoVyiJ2cA" required_version="2.4"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>EmailViewerMApp</name>
+    <tizen:privilege name="http://tizen.org/privilege/messaging.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/messaging.write"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/contact.read"/>
+    <tizen:profile name="mobile"/>
+</widget>

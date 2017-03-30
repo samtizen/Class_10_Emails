@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+
+    <title>Tizen Mobile Web Basic Application</title>
+    <link rel="stylesheet" href="lib/tau/mobile/theme/default/tau.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/email_viewer_style.css" />
+</head>
+
+<body>
+	<!-- Page 1: Основная страница с письмами из INBOX - email-viewer-main -->
+    <div class="ui-page ui-page-active" id="email-viewer-main">
+        <div id="email-viewer-main-header" class="ui-header">
+            <h1>Email Inbox</h1>
+        </div>
+        <div id="email-viewer-main-content" class="ui-content">
+			<div id="ls-email-main"></div>
+        </div>
+        <div id="email-viewer-main-footer" class="ui-footer" style="background-color:rgba(46, 139, 153, 1)">
+            <div class="row-grid">
+                <div class="col-grid-3" style="text-align:center">
+                    <a href="#" class="icon-del icon-active" id="btn-email-delete-main-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Remove</div>
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                	<!-- <a href="#" class="icon-home icon-active" id="btn-home-from-email"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Home</div>-->
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                    <a href="#" class="icon-sync icon-active" id="btn-email-sync"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Sync</div>
+                </div>
+            </div>
+        </div>
+        <div id="ui-floatingaction-email" class="ui-floatingactions" style="bottom:100px; z-index: 150;">
+            <div style="line-height:57px;">
+                <div id="btn-show-new-email-page" style="vertical-align: middle; margin-right: 5px;" class="icon-add icon-active"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page 2: Страница для создания нового сообщения - email-viewer-new-email-page -->
+    <div class="ui-page" id="email-viewer-new-email-page">
+        <div class="ui-header">
+            <h1>New Mail</h1>
+        </div>
+        <div class="ui-content">
+        	<div>
+	        	<label>To</label><span style="margin-bottom: -5px; margin-left: 15px;" class="icon-add-contact icon-active" id="btn-add-contact-new-email-page"></span>
+	        	<input id="txt-email-to-new-email-page" type="text" placeholder=""></input>
+	        	<label>Subject</label>
+	        	<input id="txt-email-subject-new-email-page" type="text" placeholder="None"></input>
+	        	<label>Message</label>
+	        	<textarea class="ui-textarea-email-veiwer" id="txt-email-message-new-email-page" cols="40" placeholder="" style="overflow-y: scroll; height: 300px !important; resize: none;"></textarea>
+			</div>
+        </div>
+        <div id="email-viewer-new-email-page-footer" class="ui-footer" style="background-color:rgba(46, 139, 153, 1)">
+        	<div class="row-grid">
+                <div class="col-grid-3" style="text-align:center">
+                    <a href="#" class="icon-back icon-active" id="btn-back-to-main-from-new-email-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Back</div>
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                    <a href="#" class="icon-send icon-active" id="btn-email-send-new-email-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Reply</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- Page 3: Страница для ответа на сообщение - email-viewer-reply-page -->
+    <div class="ui-page" id="email-viewer-reply-page">
+        <div class="ui-header">
+            <h1>Reply</h1>
+        </div>
+        <div class="ui-content">
+			<div>
+	        	<label>To</label>
+	        	<input id="txt-email-to-reply-page" type="text" placeholder=""></input>
+	        	<label>Subject</label>
+	        	<input id="txt-email-subject-reply-page" type="text" placeholder="None"></input>
+	        	<label>Message</label>
+	        	<textarea class="ui-textarea-email-veiwer" id="txt-email-message-reply-page" cols="40" placeholder="" style="overflow-y: scroll; height: 300px !important; resize: none;"></textarea>
+			</div>
+        </div>
+        <div id="email-viewer-view-page-footer" class="ui-footer" style="background-color:rgba(46, 139, 153, 1)">
+		    <div class="row-grid">
+                <div class="col-grid-3" style="text-align:center">
+                    <a href="#" class="icon-back icon-active" id="btn-back-to-message-from-reply-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Back</div>
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                    <a href="#" class="icon-send icon-active" id="btn-email-send-reply-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Reply</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Page 4: Страница для чтения сообщения - email-viewer-view-page -->
+    <div class="ui-page" id="email-viewer-view-page">
+        <div class="ui-header">
+            <h1>Message</h1>
+        </div>
+        <div class="ui-content">
+			<div>
+			<label>Date</label>
+        	<input id="txt-email-date-view-page" type="text" disabled="disabled"></input>
+        	<label>From</label>
+        	<input id="txt-email-from-view-page" type="text" placeholder=""></input>
+        	<label>Subject</label>
+        	<input id="txt-email-subject-view-page" type="text" placeholder="None"></input>
+        	<label>Message</label>
+        	<textarea class="ui-textarea-email-veiwer" id="txt-email-message-view-page" cols="40" placeholder="" style="overflow-y: scroll; height: 300px !important; resize: none;"></textarea>
+			</div>
+        </div>
+        <div id="email-viewer-view-page-footer" class="ui-footer" style="background-color:rgba(46, 139, 153, 1)">
+		    <div class="row-grid">
+                <div class="col-grid-3" style="text-align:center">
+                    <a href="#" class="icon-back icon-active" id="btn-back-to-main-from-view-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Back</div>
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                	<a href="#" class="icon-del icon-active" id="btn-email-delete-view-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Remove</div>
+                </div>
+                <div class="col-grid-3" style="text-align:center;">
+                    <a href="#" class="icon-reply icon-active" id="btn-email-reply-view-page"></a>
+                    <div class="ui-footer-btn-text" style="margin-top:-5px;">Reply</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page 0: -->
+    <div class="ui-page" id="email-viewer-test-page">
+        <div class="ui-header">
+            <h1>File List</h1>
+        </div>
+        <div class="ui-content">
+        	
+            <button id="btn-get-email-service">Get Email Service</button>
+			<button id="btn-send-email">Send Email</button>
+			<button id="btn-get-folders">Get Folders</button>
+			<button id="btn-get-emails">Get Emails</button>
+			<button id="btn-sync-emails">Sync Emails</button>
+			
+			<div class="ui-email-item">
+				<p class="ui-email-item-topic">Topic ereeeeeeeeeeeeeeee eeeeeeeee eeeeeeee eeeeeeeeeee</p>
+				<p class="ui-email-item-from">papulin_hse@mail.ru</p>
+				<p class="ui-email-item-date">date</p>
+				<input class="ui-checkbox ui-email-item-checkbox" type="checkbox" id="" />
+			</div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/tau/mobile/js/tau.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="js/email_view_prot.js"></script>
+    <script type="text/javascript" src="js/email_tizen_prot.js"></script>
+    <script type="text/javascript" src="js/email_main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
